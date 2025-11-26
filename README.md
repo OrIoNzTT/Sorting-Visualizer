@@ -1,16 +1,50 @@
-# React + Vite
+Sorting Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple web application that visualizes how different sorting algorithms work. It is built using React, Vite and basic CSS.
 
-Currently, two official plugins are available:
+Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Random array generation with adjustable size
+Supports Bubble Sort, Selection Sort, Insertion Sort, Merge Sort and Quick Sort
+Adjustable animation speed
+Start and Stop controls
+Highlights compared, swapped and sorted elements
+Displays total comparisons and swaps
+Responsive and clean interface
 
-## React Compiler
+How It Works:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React useState is used to store the array, algorithm, size, speed and highlight states.
+Sorting algorithms run as async functions using normal logic but with pauses for animation.
+A function named visualize updates the array and UI, then waits for a short delay to create the animation.
+A cancelRef flag is used so the sort can be stopped immediately when the Stop button is pressed.
 
-## Expanding the ESLint configuration
+Tech Stack:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+React
+Vite
+JavaScript
+CSS
+
+How To Run:
+
+1. Install dependencies:
+npm install
+
+2. Start development server:
+npm run dev
+
+3. Open the URL shown in the terminal (usually http://localhost:5173)
+
+File Structure:
+
+App.jsx – Main component containing UI and sorting logic
+main.jsx – Entry point
+index.css – Styling
+vite.config.js – Vite configuration
+
+Optional Future Improvements:
+
+Add pseudocode view for each algorithm
+Add side-by-side algorithm comparison
+Add light/dark theme toggle
